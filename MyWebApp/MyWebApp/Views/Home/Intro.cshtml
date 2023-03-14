@@ -2,6 +2,16 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    Int32 firstNumber = 0 ;
+    Int32 secondNumber = 0;
 }
 <h3>Gaurang Naik</h3>
-<h2>A00250808</h2>
+<hr />
+
+@using (Html.BeginForm("Intro","Home",FormMethod.Post))
+{
+    <span> @Html.TextBox("firstNumber",firstNumber,null,new { type="number",min=0,step=1 }) </span>
+    <span>@Html.TextBox("secondNumber",secondNumber,null,new { type="number",min=0,step=1 }) </span>
+    <span><input type="submit" name="Enter" /></span>
+}
+
