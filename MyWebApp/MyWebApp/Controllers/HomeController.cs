@@ -28,6 +28,15 @@ namespace MyWebApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Intro(string firstNumber, string secondNumber)
+        {
+            ViewBag.FirstNumber = firstNumber;
+            ViewBag.SecondNumber = secondNumber;
+            return View();
+
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -3,16 +3,23 @@
 *@
 @{
     ViewData["Title"] = "Introduction";
-    Int32 firstNumber = 0 ;
-    Int32 secondNumber = 0;
+   
 }
 <h3>Gaurang Naik</h3>
 <hr />
 
 @using (Html.BeginForm("Intro","Home",FormMethod.Post))
 {
-    <span> @Html.TextBox("firstNumber",firstNumber,null,new { type="number",min=0,step=1 }) </span>
-    <span>@Html.TextBox("secondNumber",secondNumber,null,new { type="number",min=0,step=1 }) </span>
-    <span><input type="submit" name="Enter" /></span>
+    <span> @Html.TextBox("firstNumber",null,new { type="number",min=0,step=1, required ="required"}) </span>
+    <span>@Html.TextBox("secondNumber",null,new { type="number",min=0,step=1,required ="required" }) </span>
+    <span><input type="submit" name="Enter" value="Enter" /></span><br />
 }
+
+@if (ViewBag.FirstNumber != null && ViewBag.SecondNumber != null)
+{
+    <hr />
+    <span>First number = <strong>@ViewBag.FirstNumber</strong></span><br />
+    <span>Second number = <strong>@ViewBag.SecondNumber</strong></span>
+}
+
 
