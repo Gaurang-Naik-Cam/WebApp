@@ -9,3 +9,5 @@ MyWebApp/.vs/MyWebApp/v17/.suo
 *.pdb
 *.dll
 *.vsidx
+MyWebApp/MyWebApp/obj/Debug/net6.0/MyWebApp.pdb
+*.pdb
